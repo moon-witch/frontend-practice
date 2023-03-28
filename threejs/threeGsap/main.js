@@ -7,7 +7,7 @@ import "./style.css";
 const scene = new THREE.Scene();
 
 //Create our sphere
-const geometry = new THREE.DodecahedronGeometry(3, 1);
+const geometry = new THREE.SphereGeometry(3, 64, 64 );
 const material = new THREE.MeshStandardMaterial({
   color: "#00fff3",
   roughness: 0.5
@@ -26,10 +26,6 @@ const light = new THREE.PointLight(0xffffff, 1, 100);
 light.position.set(0, 10, 10);
 light.intensity = 1.25
 scene.add(light);
-const light2 = new THREE.PointLight(0xffffff, 1, 100);
-light2.position.set(0, -10, -10);
-light2.intensity = 1.25
-scene.add(light2);
 
 //Camera
 const camera = new THREE.PerspectiveCamera(
